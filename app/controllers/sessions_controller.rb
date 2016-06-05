@@ -27,4 +27,10 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
+  private
+
+  def session_create_params
+    params.permit(session: [:user_id])
+  end
+
 end

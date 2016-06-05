@@ -3,7 +3,7 @@ class RantsController < ApplicationController
 
 
   def new
-    @rant = Rant.new(session[:user_id])
+    @rant = Rant.new(rant_create_params)
 
   end
 
@@ -17,6 +17,11 @@ class RantsController < ApplicationController
 
   def show
 
+  end
+
+  private
+  def rant_create_params
+    params.permit(rant: [:id, :uid, :rant, :created_at, :updated_at])
   end
 
 end
