@@ -32,3 +32,25 @@ h1 {
   display: inline-block;
   float: left;
 }
+
+.userinfo {
+
+  padding-left: 25px;
+  width: 100%;
+  height: 300px;
+  background-image: image_url('stripes.png');
+  background-repeat: repeat;
+  background-size: 100%;
+  margin-top: 0px;
+}
+
+.userinfo > h2 {
+  float: left;
+  margin-left: 50px;
+}
+
+.link {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 200px;
+}

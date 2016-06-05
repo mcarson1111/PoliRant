@@ -12,10 +12,20 @@ class UsersController < ApplicationController
 
 
       redirect_to root_path
-      
+
     else
       render :new
     end
+  end
+
+  def show
+    @user = User.find(session[:user_id])
+  render :show
+  end
+
+  def edit
+    @user = User.find(params[:id])
+    render :new
   end
 
   private

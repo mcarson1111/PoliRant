@@ -1,48 +1,23 @@
-<div class="container">
-  <div class="row profile">
-		<div class="col-md-3">
-			<div class="profile-sidebar">
+<div class="userinfo">
 
-				<!-- SIDEBAR USER TITLE -->
-				<div class="profile-usertitle">
-					<div class="profile-usertitle-name">
-						<%= @user.username %>
-					</div>
-          <div class="profile-usertitle-name">
-						<%= @user.name %>
-					</div>
-					<div class="profile-usertitle-job">
-            <%= @user.email %>
-					</div>
-				</div>
-				<!-- END SIDEBAR USER TITLE -->
-				<!-- SIDEBAR BUTTONS -->
+  <h2><%= @user.username.capitalize %></h2>
+    <br>
+	<p><%= @user.name %></p>
+  <p><%= @user.email %></p>
+
+	<div class="profile-usermenu">
+		<ul class="nav">
 
 
-				<!-- END SIDEBAR BUTTONS -->
-				<!-- SIDEBAR MENU -->
-				<div class="profile-usermenu">
-					<ul class="nav">
-
-
-            <% if @user.current_user?(current_user) %>
-              <li class = "link">
-                <%= link_to edit_user_path(@user) do%>
-                <i class="glyphicon glyphicon-user"></i>
-                Update Account
-                <% end %>
-              </li>
-            <% end %>
-					</ul>
-				</div>
-				<!-- END MENU -->
-			</div>
-		</div>
-		<div class="col-md-9">
-      <div class="profile-content">
-        <h2><%= @user.username.capitalize %></h2>
-        <p>Biography: <%= @user.biography %></p>
-      </div>
-		</div>
+      <% if @user.current_user?(current_user) %>
+        <li class = "link">
+          <%= link_to edit_user_path(@user) do%>
+          <i class="glyphicon glyphicon-user"></i>
+          Update Account
+          <% end %>
+        </li>
+      <% end %>
+		</ul>
 	</div>
+
 </div>
