@@ -1,19 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
 
 
-<%= form_tag "submit", :id => "my_form" do %>
-  Comment: <%= text_area_tag "comment", :rows => 4, :cols => 50 %>
-  <%= submit_tag "Submit" %>
-<% end %>
+  <div class="rant">
 
 
-<div class="form-group">
-  <label for="comment">Rant:</label>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
+
+  <div class="table">
+    <h2>Rep Contacts:</h2>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <%= form_tag "submit", :id => "my_form" do %>
+  <h3><label for="comment">Listen up...</label></h3>
+  <br>
+  <%= text_area_tag "comment" %>
+  <%= submit_tag "Send it out!" %>
+  <% end %>
+
+  <p> take the space you need; drag the botton-right corner of the rant area to increase its size.</p>
 </div>
-
-
-
-<textarea rows="30" cols="100">
-
-
-</textarea>
+</html>

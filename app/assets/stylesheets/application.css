@@ -41,6 +41,10 @@ a {
   padding-right: 120px;
 }
 
+.navbar {
+  margin-bottom:  0px;
+}
+
 .description {
   margin: 50px;
 }

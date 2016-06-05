@@ -3,6 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.rant {
+  width: 100%;
+  height: 1000px;
+  background-image: image_url('stripes.png');
+  background-repeat: repeat;
+  background-size: 100%;
+  margin-top: 0px;
+}
+
+.table {
+  width: 50px;
+  float: right;
+  margin-right: 50px;
+}
+
+label {
+  margin-left: 50px;
+}
+
 textarea {
-  margin-left: 100px;
+  margin-left: 50px;
+}
+
+p {
+  margin-left: 50px;
+  font-size: 12px;
 }
