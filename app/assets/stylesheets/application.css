@@ -16,7 +16,7 @@
 
 
  .logo {
-   padding-left: 500px;
+   padding-left: 50px;
  }
 
  .image > img {
@@ -44,6 +44,25 @@ a {
 .navbar {
   margin-bottom:  0px;
 }
+
+h4 {
+  float:right;
+  width: 200px;
+  margin-right: 180px;
+  margin-top: 80px;
+}
+
+
+
+@media (min-width: 400px)
+.container {
+  margin-right: 0px;
+  float:right;
+  width: 400px;
+  margin-top: 80px;
+}
+
+
 
 .description {
   margin: 50px;
