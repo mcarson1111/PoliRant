@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/users/:user_id/rant-address' => 'rants#address', as: 'address'
   post 'users/:user_id/rant-address' =>'rants#create', as: 'address_save'
 
+  post	'/users/:user_id/rants/:id'	=> 'rants#sent'
+
   resources :users do
     resources :rants
   end

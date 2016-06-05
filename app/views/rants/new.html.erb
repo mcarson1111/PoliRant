@@ -6,70 +6,70 @@
 
 
 
-  <div class="table">
-    <h2>Rep Contacts:</h2>
+    <div class="table">
+      <h2>Rep Contacts:</h2>
 
-    <!-- eventually this will be a loop that iterates through the data recieved form the wrapper -->
+      <!-- eventually this will be a loop that iterates through the data recieved form the wrapper -->
 
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>John</td>
-          <td>Doe</td>
-          <td>john@example.com</td>
-        </tr>
-        <tr>
-          <td>Mary</td>
-          <td>Moe</td>
-          <td>mary@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <%= form_tag "rants/:id", :id => "my_form" do %>
+    <h3><label for="comment">Listen up...</label></h3>
+    <br>
+    <%= text_area_tag "comment" %>
+    <%= submit_tag "Send it out!" %>
+    <% end %>
+
+    <p> Take the space you need; drag the botton-right corner of the rant area to increase its size.</p>
   </div>
-  <%= form_tag "rants/:id", :id => "my_form" do %>
-  <h3><label for="comment">Listen up...</label></h3>
-  <br>
-  <%= text_area_tag "comment" %>
-  <%= submit_tag "Send it out!" %>
-  <% end %>
-
-  <p> Take the space you need; drag the botton-right corner of the rant area to increase its size.</p>
-</div>
 </html>
