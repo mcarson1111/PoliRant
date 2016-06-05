@@ -2,6 +2,7 @@ class RantsController < ApplicationController
    skip_before_action :verify_authenticity_token
 
 
+
   def new
     @rant = Rant.new  #(rant_create_params))
     @user = User.find_by(id: session[:user_id])
@@ -13,11 +14,15 @@ class RantsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(id: session[:user_id])
-    #save rant to user
-    @rant = @user.rants.new(rant_create_params[:rant])
+    if session[:user_id]
+      @user = User.find_by(id: session[:user_id])
+      #save rant to user
+      @rant = @user.rants.new(rant_create_params[:rant])
 
-    render :new
+      render :new
+    else
+      redirect_to new_user_path
+    end
   end
 
   def show
@@ -27,6 +32,8 @@ class RantsController < ApplicationController
   def sent
 
   end
+
+
 
 
   private

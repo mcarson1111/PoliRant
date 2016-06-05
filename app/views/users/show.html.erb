@@ -18,6 +18,16 @@
         </li>
       <% end %>
 		</ul>
+
+    <% if @user.current_user?(current_user) %>
+      <li class = "link">
+        <%= link_to user_rants_path(@user) do%>
+        Your Rants
+        <% end %>
+      </li>
+    <% end %>
+
+
 	</div>
 
 </div>
