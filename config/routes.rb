@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
 
-  get 'welcome' => 'home#index'
+  # get '/' => 'home#index'
+  root 'home#index'
 
+  resources :users do
+    resources :rants
+  end
+
+
+  post '/sign_up' => 'users#create'
+  get '/sign_up' => 'users#new'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
 
 

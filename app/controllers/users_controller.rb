@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create, :show]
+  #skip_before_action :require_login, only: [:new, :create, :show]
   def new
     @user = User.new
   end
 
   def create
     @user = User.new(user_create_params[:user])
+    @user.save
     if @user.save
       session[:user_id] = @user.id
       redirect_to user_path(@user)
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render :show
+  
   end
 
   def edit
@@ -39,6 +40,6 @@ class UsersController < ApplicationController
   private
 
   def user_create_params
-    params.permit(user: [:username, :email, :password, :password_confirmation,:photo_url, :biography, :merchant])
+    params.permit(user: [:utf8, :authenticity_token, :commit, :name, :username, :email, :password, :password_confirmation,:photo_url, :biography, :merchant])
   end
 end

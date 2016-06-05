@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .logo {
+   padding-left: 500px;
+ }
+
+ .image > img {
+   margin-left: 40px;
+   border: 10px solid black;
+
+ }
+
+.navbar-nav>li>a {
+  padding-left: 200px;
+}
+
+.navbar-brand {
+  padding-left: 150px;
+}
+
+a {
+    padding-left: 45px;
+}
+
+.nav {
+  padding-right: 120px;
+}
+
+.description {
+  margin: 50px;
+}
