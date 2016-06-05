@@ -1,12 +1,9 @@
-require 'httparty'
-
 class User < ActiveRecord::Base
   has_many :rants
 
   validates :username, presence: true
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true
-  validates :uid, presence: true
 
   has_secure_password
 

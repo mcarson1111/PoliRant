@@ -1,8 +1,4 @@
-<div class = "login">
-  <div class = "container">
-    <div class = "form">
-
-      <h1> Log In </h1>
+<h1> Log In </h1>
       <% if flash.now[:danger] %>
         <div class="alert alert-danger "><%=  flash.now[:danger] %></div>
       <% end %>
@@ -18,7 +14,3 @@
         <%= f.submit "Log in", class: "btn-submit" %>
       <% end %>
       <p>New user? <%= link_to "Sign up now!", '/sign_up' %></p>
-    </div>
-  </div>
-
-</div>

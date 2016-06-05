@@ -25,25 +25,13 @@
 
  }
 
-.navbar-nav>li>a {
-  padding-left: 200px;
-}
-
-.navbar-brand {
-  padding-left: 150px;
-}
-
-a {
-    padding-left: 45px;
-}
-
-.nav {
-  padding-right: 120px;
-}
-
-.navbar {
-  margin-bottom:  0px;
-}
+ .navbar {
+     position: relative;
+     min-height: 50px;
+     margin-bottom: 20px;
+     border: 1px solid transparent;
+     margin-right: 40px;
+ }
 
 h4 {
   float:right;
@@ -52,6 +40,14 @@ h4 {
   margin-top: 40px;
 }
 
+.input-sm, .form-group-sm .form-control {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin-left: 0px;
+}
 
 .container {
   margin-right: 50px;

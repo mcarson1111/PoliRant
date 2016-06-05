@@ -15,4 +15,8 @@ class RantsController < ApplicationController
     render :new
   end
 
+  def show
+
+  end
+
 end
