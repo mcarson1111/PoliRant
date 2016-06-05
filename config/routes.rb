@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get '/users/:user_id/rant-address' => 'rants#address', as: 'address'
-  post 'users/:user_id/rant-address' =>'rants#save', as: 'address_save'
+  post 'users/:user_id/rant-address' =>'rants#create', as: 'address_save'
 
   resources :users do
     resources :rants

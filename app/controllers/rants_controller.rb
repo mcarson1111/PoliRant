@@ -1,4 +1,5 @@
 class RantsController < ApplicationController
+   skip_before_action :verify_authenticity_token
 
 
   def new
@@ -9,8 +10,9 @@ class RantsController < ApplicationController
   def address
   end
 
-  def save
+  def create
     self.new
+    render :new
   end
 
 end
