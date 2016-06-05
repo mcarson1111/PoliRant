@@ -6,9 +6,11 @@ class RantsController < ApplicationController
 
   end
 
-  def create
-
+  def address
   end
 
+  def save
+    self.new
+  end
 
 end

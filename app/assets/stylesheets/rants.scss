@@ -23,6 +23,25 @@ h2 {
   margin-right: 230px;
 }
 
+h3 {
+  margin-left: 25px;
+}
+
+.address {
+  margin-left: 50px;
+}
+
+.controls > p {
+  margin-left: 80px;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    margin-left: 80px;
+}
+
 label {
   margin-left: 50px;
 }
@@ -35,3 +54,8 @@ p {
   margin-left: 50px;
   font-size: 12px;
 }
+
+
+  .submit {
+    margin-left: 150px;
+  }
