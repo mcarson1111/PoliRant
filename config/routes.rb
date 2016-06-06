@@ -3,10 +3,13 @@ Rails.application.routes.draw do
   # get '/' => 'home#index'
   root 'home#index'
 
-  get '/users/:user_id/rant-address' => 'rants#address', as: 'address'
-  post 'users/:user_id/rant-address' =>'rants#create', as: 'address_save'
+  post '/address/new.user_id' => 'address#create'
+  resources :address do
 
-  post	'/users/:user_id/rants/:id'	=> 'rants#sent'
+  end
+
+
+  post	'/address/rants/:id'	=> 'rants#sent', as: 'sent'
 
   resources :users do
     resources :rants
