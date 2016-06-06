@@ -43,6 +43,8 @@ class RantsController < ApplicationController
     end
   end
 
+  
+
 
 
     def address_params
@@ -52,28 +54,7 @@ class RantsController < ApplicationController
 end
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#old code that works if this breaks:
   # def new
   #   @rant = Rant.new  #(rant_create_params))
   #   @user = User.find_by(id: session[:user_id])

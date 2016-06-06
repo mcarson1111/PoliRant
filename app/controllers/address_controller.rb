@@ -26,17 +26,22 @@ class AddressController < ApplicationController
 
   def create
     @address = Address.new(address_params[:address])
-    # def create
-    #   if session[:user_id]
-    #     @user = User.find_by(id: session[:user_id])
-    #     #save rant to user
-    #     @rant = @user.rants.new(rant_create_params[:rant])
+
+    #this is to make a request to the wrapper/api:
+
+    #     @address.address == params[:address]
+    #     @address.city == params[:city]
+    #     @address.state == params[:state]
+    #     @address.zip == params[:zip]
     #
-    #     render :new
-    #   else
-    #     redirect_to new_user_path
-    #   end
-    # end
+    # address_info = { }
+    # address_info[:adress] = { address: params[:address], city: params[:city], state: params[:state], zip: params[:zip]}
+    #
+    #
+    # address_info.to_json
+    #
+    # @response = ContactWrapper.send_request(address_info)
+    
     render "rants/new"
   end
 
