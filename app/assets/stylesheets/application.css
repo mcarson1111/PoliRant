@@ -25,6 +25,19 @@
 
  }
 
+.poli_values {
+  margin: 0px;
+  width: 500px;
+  float: right;
+}
+
+ .poli_values > h3 {
+   float: right;
+   margin: 0px;
+   padding-top: 140px;
+   padding-bottom: 15px;
+ }
+
  .navbar {
      position: relative;
      min-height: 50px;

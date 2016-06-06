@@ -8,3 +8,47 @@
   padding-right: 100px;
 
 }
+
+.photos {
+    position:relative; /* constrain absolutely positioned child elements */
+    margin-top: 140px;
+}
+
+.popular_rants {
+    float:left; /* Float the first element */
+    margin-left:80px; /* Here's that 30px you wanted */
+}
+
+.popular_rants >img {
+  padding-left: 100px;
+}
+
+.popular_rants > h3 {
+  margin-top: 0px;
+  padding-left: 85px;
+}
+
+.success_stories {
+    margin: 0 auto; /* Center the second element */
+}
+
+.success_stories > img {
+  padding-left: 250px;
+}
+.success_stories > h3 {
+  margin-top: 0px;
+  padding-left: 600px;
+}
+
+.other_causes {
+    /* easier than float:right, but that could work too with some tweaking */
+    position:absolute;
+    top:0;
+    right:150px; /* Here's that other 30px you wanted */
+}
+
+.other_causes > h3 {
+  margin-top: 0px;
+  padding-right: 50px;
+
+}

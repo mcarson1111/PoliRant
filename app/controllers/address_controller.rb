@@ -41,7 +41,7 @@ class AddressController < ApplicationController
     # address_info.to_json
     #
     # @response = ContactWrapper.send_request(address_info)
-    
+
     render "rants/new"
   end
 
