@@ -46,6 +46,7 @@ group :development, :test do
   gem 'webmock'  #mocking library (around HTTP transactions, webmock is pretending to be HTTP)
   gem 'dotenv-rails'
   gem 'byebug'
+  gem 'dotenv-rails'
 end
 
 group :development do

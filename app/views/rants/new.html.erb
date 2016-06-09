@@ -11,58 +11,29 @@
 
       <!-- eventually this will be a loop that iterates through the data recieved form the wrapper -->
 
+
+
+
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
+            <th>Name</th>
             <th>Email</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr>
-          <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-          </tr>
-        </tbody>
-      </table>
+            <tbody>
+              <% @response.officials.each do |official| %>
+                <tr>
+                  <% if official["emails"] %>
+                    <td><%= official["name"] %></td>
+                    <td><%= official["emails"].join(', ') %></td>
+                  <% end %>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>
     </div>
+
     <%= form_tag "rants/:id", :id => "my_form" do %>
     <h3><label for="comment">Listen up...</label></h3>
     <br>

@@ -1,3 +1,5 @@
+require 'ContactWrapper'
+
 class AddressController < ApplicationController
   skip_before_action :verify_authenticity_token
   skip_before_action :require_login, only: [:new, :create]
@@ -24,23 +26,12 @@ class AddressController < ApplicationController
     end
   end
 
+
   def create
-    @address = Address.new(address_params[:address])
+      address_string = "#{params[:address]} #{params[:city]}, #{params[:state]}"
 
-    #this is to make a request to the wrapper/api:
 
-    #     @address.address == params[:address]
-    #     @address.city == params[:city]
-    #     @address.state == params[:state]
-    #     @address.zip == params[:zip]
-    #
-    # address_info = { }
-    # address_info[:adress] = { address: params[:address], city: params[:city], state: params[:state], zip: params[:zip]}
-    #
-    #
-    # address_info.to_json
-    #
-    # @response = ContactWrapper.send_request(address_info)
+    @response = ContactWrapper.send_request(address_string)
 
     render "rants/new"
   end
